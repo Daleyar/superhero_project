@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'superheroes'
 ]
 
 MIDDLEWARE = [
@@ -74,9 +75,16 @@ WSGI_APPLICATION = 'superhero_project.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+     'default': {
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'superhero_database',
+        'USER': 'root',
+        'PASSWORD': 'PASSword345$$',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'OPTIONS': {
+            'autocommit': True
+        }
     }
 }
 
