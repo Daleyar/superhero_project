@@ -7,13 +7,13 @@
     <title>Create New Hero</title>
 </head>
 <body>
-    <form action="{% url 'superheroes:' %}" method="post">
+    <form action="{% url 'superheroes:create' %}" method="post">
         {% csrf_token %}
-        Name: <input type="text" name="name" id="name"<br />
-        Alter Ego: <input type="text" name="alter_ego" id="alter_ego"<br />
-        Primary Ability: <input type="text" name="primary" id="primary"<br />
-        Scondary Ability: <input type="text" name="secondary" id="secondary"<br />
-        Catchphrase: <input type="text" name="catchphrase" id="catchphrase"<br />
+        Name: <input type="text" name="name" id="name"><br />
+        Alter Ego: <input type="text" name="alter_ego" id="alter_ego"><br />
+        Primary Ability: <input type="text" name="primary" id="primary"><br />
+        Scondary Ability: <input type="text" name="secondary" id="secondary"><br />
+        Catchphrase: <input type="text" name="catchphrase" id="catchphrase"><br />
         <input type="submit" value="Add!">
     </form>
 </body>
