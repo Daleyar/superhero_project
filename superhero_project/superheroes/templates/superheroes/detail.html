@@ -9,10 +9,11 @@
 <body>
     <h1>Details of Heroes</h1>
     <ul>
-        {% for hero in single_hero %}
-        <li><h2>{{hero.name}}</h2></li>
-        <li><h2>{{hero.alter_ego}}</h2></li>
-        {% endfor %}
+        <h2>{{single_hero.name}}</h2>
+        <li><h3>Alter Ego: {{single_hero.alter_ego}}</h3></li>
+        <li><h3>Primary Ability: {{single_hero.primary_ability}}</h3></li>
+        <li><h3>Scondary Ability: {{single_hero.secondary_ability}}</h3></li>
+        <li><h3>Catchphrase: {{single_hero.catch_phrase}}</h3></li>
     </ul>
 </body>
 </html>

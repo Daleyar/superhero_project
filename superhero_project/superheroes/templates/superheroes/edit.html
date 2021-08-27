@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <form action="{%url 'superheroes:edit' edited_hero.id %}" method="post">
+        {%csrf_token %} 
+        
+        Name: <input type="text" name="name" id="name" /><br />
+        Alter Ego: <input type="text" name="alter_ego" id="alter_ego" /><br />
+        Primary_Ability: <input type="text" name="primary" id="primary" /><br />
+        Secondary Ability:<input type="text" name="secondary" id="secondary" /><br />
+        Catchphrase: <input type="text" name="catchphrase" id="catchphrase" /><br />
+        <input type="submit" value="Confirm">
+        </form>
+        <a class="btn btn-sm btn-danger" href="{% url 'superheroes:index' %}">Exit</a>
+</body>
+</html>

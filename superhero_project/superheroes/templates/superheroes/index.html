@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Superhero Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
     <h1>List of Heroes</h1>
     <ul>
         {% for hero in all_heroes %}
-        <li><h2>{{hero.name}} - <a href="{% url 'superheroes:detail' hero.id %}">Click for Details</a></h2></li>
+        <li><h3>{{hero.name}} - <a class="btn btn-sm btn-info" href="{% url 'superheroes:detail' hero.id %}">Click for Details</a>
+        <a class="btn btn-sm btn-info" href="{% url 'superheroes:edit' hero.id %}">Update</a> 
+        <a class="btn btn-sm btn-danger" href="{% url 'superheroes:delete' hero.id %}">Delete</a></h3></li>
         {% endfor %}
     </ul>
-    <a href="{% url 'superheroes:create'%}">Add New Hero</a>
+    <a class="btn btn-sm btn-info" href="{% url 'superheroes:create'%}">Add New Hero</a>
 </body>
 </html>
